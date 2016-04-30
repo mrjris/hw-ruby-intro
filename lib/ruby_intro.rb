@@ -22,11 +22,12 @@ def hello(name)
 end
 
 def starts_with_consonant?(s)
-  s.empty? ? false : (s.start_with?(/[ueoaiUEOAI#]/) ? false : true)
+  s.empty? ? false : (s =~ /^[ueoaiUEOAI#]/ ? false : true)
 end
 
 def binary_multiple_of_4?(s)
-  # YOUR CODE HERE
+  return false unless s =~ /^[01]+$/
+    s.to_i(2) % 4 == 0
 end
 
 # Part 3
