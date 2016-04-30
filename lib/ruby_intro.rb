@@ -10,8 +10,9 @@ def max_2_sum(array)
   sum(array.sort.last(2))
 end
 
-def sum_to_n? arr, n
-  
+def sum_to_n?(array, n)
+   return false if array.empty? && n.zero? 
+   array.combination(2).any? { |a, b| a + b == n }
 end
 
 # Part 2
