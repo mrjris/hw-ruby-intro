@@ -2,16 +2,16 @@
 
 # Part 1
 
-def sum arr
-  # YOUR CODE HERE
+def sum(array) 
+  array.inject(0, :+)
 end
 
-def max_2_sum arr
-  # YOUR CODE HERE
+def max_2_sum(array)
+  sum(array.sort.last(2))
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  
 end
 
 # Part 2
