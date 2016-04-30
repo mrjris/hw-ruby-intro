@@ -22,7 +22,7 @@ def hello(name)
 end
 
 def starts_with_consonant?(s)
-  s.empty? ? false : (s.start_with?("u","U","e","E","o","O","a","A","i","I", "#") ? false : true)
+  s.empty? ? false : (s.start_with?(/[ueoaiUEOAI#]/) ? false : true)
 end
 
 def binary_multiple_of_4?(s)
